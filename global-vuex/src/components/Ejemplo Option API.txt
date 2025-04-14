@@ -1,0 +1,18 @@
+<script lang="ts"> //opcion API
+import { defineComponent } from 'vue';
+import { mapMutations,mapState,mapGetters } from 'vuex';
+
+export default defineComponent({
+  name: 'HelloWorld',
+  computed: {
+    ...mapState(['counter']),
+    ...mapGetters(['times2'])
+  },
+  methods:{
+    ...mapMutations(['setCounter']),
+    increment(){
+      this.setCounter(this.counter + 1)
+    }
+  }
+})
+</script>
