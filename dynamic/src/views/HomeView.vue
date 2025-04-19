@@ -60,6 +60,6 @@ const users = ref([
   },
 ]);
 
-const filteredUser = ref([]);
+const filteredUser = ref<{ name: string; age: number; position: string }[]>([]);
 filteredUser.value = users.value;
 </script>
