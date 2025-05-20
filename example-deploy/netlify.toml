@@ -5,6 +5,6 @@
 
 [[redirects]]
     from = "/*"
-    to = "/index.html"
+    to = "example-deploy/dist/index.html"
     status = 200
     
