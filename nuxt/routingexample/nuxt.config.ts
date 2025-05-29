@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  ssr: true,
   nitro: {
-    prerender: {
-      routes: ['/', '/about', '/contact', '/services']
-    }
+    plugins: ["~/server/index.ts"],
   },
-
+  runtimeConfig: {
+    mongodbUri: process.env.MONGODB_URI
+  },
+  
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
